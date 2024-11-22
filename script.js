@@ -10,7 +10,7 @@ window.clearDisplay = () => {
 
 window.calculate = () => {
     try {
-        display.value = eval(display.value); // Im not even joking, this is what does all the calculations - Elias
+        display.value = eval(display.value); // eval() is used to evaluate the expression, yeah, that simple - Elias
     } catch (error) {
         display.value = 'Error';
     }

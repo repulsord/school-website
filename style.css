@@ -7,6 +7,24 @@ body {
     background-color: #171717;
 }
 
+h1 {
+    font-family: Lexend, sans-serif;
+    position: absolute;
+    top: 0;
+    background-color: transparent; 
+    color: #fff; 
+    font-size: 20px;
+}
+
+h2 {
+    font-family: Lexend, sans-serif;
+    position: absolute;
+    top: 30px;
+    background-color: transparent; 
+    color: #fff; 
+    font-size: 15px;
+}
+
 .calculator {
     width: 300px;
     background-color: #333;
