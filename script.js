@@ -5,6 +5,14 @@ window.appendToDisplay = (value) => {
     display.value += value;
 }
 
+window.removeChar = () => {
+    try {
+        display.value = display.value.slice(0, -1); // Remove last character
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 // Function to clear the display
 window.clearDisplay = () => {
     display.value = '';
