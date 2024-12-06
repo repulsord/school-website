@@ -6,8 +6,39 @@
 </head>
 <!-- Elias was here :D -->
 <body>
-    <h1>Elias Website :D</h1>
-    <h2>Calculator</h2>
+
+    <header class="top-bar">
+        <h1 style="font-family: lexend;">Calculator :D Elias</h1>
+        <!-- Dropdown Menus for Categories -->
+        <nav class="dropdown-menus">
+            <div class="dropdown">
+                <button class="dropdown-btn">Apps</button>
+                <div class="dropdown-content">
+                    <a href="#"><i class="fas fa-cloud"></i>Unavaileble</a>
+                    <a href="#"><i class="fas fa-music"></i>Not here yet!</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Games</button>
+                <div class="dropdown-content">
+                    <a href="#"><i class="fas fa-gamepad"></i>Nah, too lazy to make any games :)</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">More</button>
+                <div class="dropdown-content">
+                    <a href="#"><i class="fas fa-users"></i> Our team</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
     <div class="calculator">
         <input type="text" id="display" disabled>
         <div class="row">
@@ -38,6 +69,8 @@
             <button class="button" onclick="appendToDisplay('/')">/</button>
     </div>
 </body>
+
 <script src="script.js"></script>
+<script src="https://kit.fontawesome.com/e04d58bc5a.js" crossorigin="anonymous"></script>
 
 </html>

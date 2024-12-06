@@ -19,6 +19,15 @@ window.calculate = () => {
     }
 }
 
+function warnDumbUser() {
+    let promptUser = prompt("Did you really think that was going to work?")
+    promptUser = promptUser.toLowerCase()
+    if (prompt == "no" ) {
+        alert("Then why tf did you click it??")
+        
+    }
+}
+
 // Keyboard input handler
 window.addEventListener('keydown', (event) => {
     const key = event.key;
