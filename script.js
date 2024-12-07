@@ -24,10 +24,13 @@ function warnDumbUser() {
     promptUser = promptUser.toLowerCase()
     if (prompt == "no" ) {
         alert("Then why tf did you click it??")
+        return
     } else if (prompt == "yes") {
         alert("Then why tf did you click it??")
+        return
     } else  {
         alert("Well, you aint getting there anyway, because it does not exist :D")
+        return
     }
 }
 
