@@ -62,3 +62,7 @@ window.addEventListener('keydown', (event) => {
         clearDisplay(); // Clear display on 'Escape' key
     }
 });
+
+setTimeout(function() {
+    alert("Please give me a A! :)")
+}, 2000)
