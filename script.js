@@ -65,4 +65,10 @@ window.addEventListener('keydown', (event) => {
 
 setTimeout(function() {
     alert("Please give me a A! :)")
-}, 2000)
+}, 1000)
+
+function toggleExplore() {
+    const exploreTab = document.getElementById('explore');
+    exploreTab.classList.toggle("hidden");
+    console.log("Toggled visibilty of explore tab");
+}

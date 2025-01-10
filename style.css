@@ -12,6 +12,45 @@ body {
     background-color: #171717;
 }
 
+#explore-btn {
+    background-color: #222;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    transition: 500ms;
+}
+
+#explore-btn:hover {
+    background-color: #282828;
+    transition: 500ms;
+}
+
+#explore {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: absolute !important;
+    z-index: 0;
+    top: 100%;
+    transition: 0.3s ease-in-out;
+
+}
+
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    transition: 0.3s ease-in-out;}
+
 .calculator {
     width: 300px;
     background-color: #333;
