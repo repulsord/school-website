@@ -10,35 +10,109 @@ body {
     display: flex;
     height: 100vh;
     background-color: #171717;
+    caret-color: transparent; /* Hide cursor */
 }
 
-#explore-btn {
-    background-color: #222;
-    border-radius: 5px;
+body.dark-theme {
+    background-color: #171717;
+    color: #ffffff;
+}
+
+body.light-theme {
+    background-color: rgb(255, 252, 246);
+    color: #000000;
+}
+
+#theme-toggle {
+    background-color: #333;
+    border: 3px black !important;
     color: #fff;
-    font-weight: 700;
-    border: none;
-    transition: 500ms;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    top: 10px;
+    padding-top: 5px;
+    transition: 300ms;
 }
 
-#explore-btn:hover {
-    background-color: #282828;
-    transition: 500ms;
-}
-
-#explore {
-    background-color: #111;
-    padding: 20px;
-    border-radius: 10px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+#help p {
     position: absolute !important;
-    z-index: 0;
-    top: 100%;
-    transition: 0.3s ease-in-out;
-
+    top: 50px !important;
+    left: 10px;
+    color: #fff;
+    font-family: Lexend, sans-serif;
+    cursor:default;
+    caret-color: transparent; /* Hide cursor */
+    user-select: none;
 }
+
+
+#help-popup {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    color: #fff;
+    font-family: Lexend, sans-serif;
+    user-select: none;
+    max-width: 400px;
+}
+
+/* Light theme */
+
+body.light-theme .calculator {
+    background-color: rgb(194, 193, 189);
+}
+
+body.light-theme .calculator button {
+    background-color: rgb(194, 193, 189);
+    color: #000000;
+}
+
+body.light-theme .calculator input {
+    background-color: rgb(194, 193, 189);
+    color: #000000;
+    border-color: #aaaaaa !important;
+}
+
+body.light-theme .top-bar {
+    background-color: rgb(194, 193, 189);
+    color: #000000;
+}
+
+body.light-theme #theme-toggle {
+    background-color: rgb(194, 193, 189);
+    color: #000000;
+}
+
+body.light-theme .dropdown-btn {
+    background-color: rgb(194, 193, 189);
+    color: #000000 !important;
+}
+
+body.light-theme .dropdown-content {
+    background-color: rgb(194, 193, 189);
+    color: #000000 !important;
+}
+
+#theme-toggle:hover {
+    background-color: #272727;
+    transition: 500ms;
+}
+
+body.light-theme #help p {
+    color: #000000;
+    transition: 500ms;
+}
+
+body.light-theme #help-popup {
+    color: #000000;
+    transition: 500ms;
+}
+
+
+/* Light theme end */
+
 
 .hidden {
     position: absolute;
@@ -77,6 +151,8 @@ input[type="text"] {
     background-color: #333;
     color: #fff;
     margin-bottom: 10px;
+    pointer-events: none; /* Prevent interactions */
+    caret-color: transparent; /* Hide cursor */
 }
 
 .row {
@@ -94,11 +170,29 @@ input[type="text"] {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+    caret-color: transparent; /* Hide cursor */
+    user-select: none; /* Prevent text selection */
     transition: background-color 0.2s;
 }
 
+
 .button:hover {
     background-color: #666;
+}
+
+.fake-button {
+    width: 65px;
+    height: 65px;
+    font-size: 25px;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    caret-color: transparent; /* Hide cursor */
+    cursor:default;
+    user-select: none; /* Prevent text selection */
 }
 
 
@@ -154,15 +248,6 @@ input[type="text"] {
     position: relative;
 }
 
-.dropdown-login-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Lexend', sans-serif;
-}
 
 .dropdown-content {
     display: none;

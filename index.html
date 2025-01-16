@@ -5,7 +5,7 @@
     <title>Calculator</title>
 </head>
 <!-- Elias was here :D -->
-<body>
+<body class="dark-mode">
 
     <header class="top-bar">
         <h1 style="font-family: lexend;">Calculator :D Elias</h1>
@@ -14,15 +14,9 @@
             <div class="dropdown">
                 <button class="dropdown-btn">Apps</button>
                 <div class="dropdown-content">
-                    <a href="#"><i class="fas fa-cloud" onclick="warnDumbUser()"></i>Unavaileble</a>
+                    <a href="#"><i class="fas fa-cloud" onclick="warnDumbUser()"></i>Unvaileble</a>
                     <a href="#"><i class="fas fa-music" onclick="warnDumbUser()"></i>Not here yet!</a>
                 </div>
-            </div>
-
-            <div id="explore" class="hidden">
-                <h2>Explore what to do here!</h2>
-                <p>You can (obviously) use a calculator but there are more! <br> 
-                    Check the dropdown menu and try clicking a button :)</p>
             </div>
 
             <div class="dropdown">
@@ -40,20 +34,36 @@
                 </div>
             </div>
 
-            <button id="explore-btn" onclick="toggleExplore()">Explore the website!</button>
+            <button id="theme-toggle" onclick="toggleTheme()">Switch to Light Mode</button>
         </nav>
 
     </header>
 
+    <div id="help" onclick="toggleHelpPopup()">
+        <p>?</p>
+    </div>
 
+    <div id="help-popup" class="hidden">
+        <h2>Functions</h2>
+        <p>Here you can see all the functions on the website!</p>
+        <br>
+        <p>1. You can obviously use a calculator</p>
+        <p>2. You can press ctrl+c to copy results in the calculator (without selecting the text)!</p>
+    </div>
 
     <div class="calculator">
         <input type="text" id="display" disabled>
         <div class="row">
+            <button class="button" onclick="appendToDisplay('(')">(</button>
+            <button class="button" onclick="appendToDisplay(')')">)</button>
+            <button class="button" onclick="appendToDisplay('^')">^</button>
+            <button class="button" onclick="appendToDisplay('sqrt(')">√</button>  
+        </div>  
+        <div class="row">
             <button class="button" onclick="appendToDisplay('7')">7</button>
             <button class="button" onclick="appendToDisplay('8')">8</button>
             <button class="button" onclick="appendToDisplay('9')">9</button>
-            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="appendToDisplay('/')">/</button>
         </div>
         <div class="row">
             <button class="button" onclick="appendToDisplay('4')">4</button>
@@ -68,16 +78,19 @@
             <button class="button" onclick="appendToDisplay('-')">-</button>
         </div>
         <div class="row">
+            <button class="button" onclick="clearDisplay()">C</button> 
             <button class="button" onclick="appendToDisplay('0')">0</button>
             <button class="button" onclick="appendToDisplay('.')">.</button>
-            <button class="button" onclick="calculate()">=</button>
             <button class="button" onclick="appendToDisplay('*')">*</button>
         </div>
-        <div class="row">
-            <button class="button" onclick="appendToDisplay('/')">/</button>
+    <div class="row">
+        <button class="fake-button"> </button>
+        <button class="fake-button"> </button>
+        <button class="button" onclick="calculate()">=</button>
     </div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.9.0/math.min.js"></script>
 <script src="script.js"></script>
 <script src="https://kit.fontawesome.com/e04d58bc5a.js" crossorigin="anonymous"></script>
 
