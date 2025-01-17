@@ -23,17 +23,17 @@ function warnDumbUser() {
     console.log("Warning user");
     let promptUser = prompt("Did you really think that was going to work?");
     promptUser = promptUser.toLowerCase();
-    if (prompt == "no") {
-    alert("Then why tf did you click it??");
+    if (promptUser == "no") {
+    alert("Well, I am too lazy to make any apps/games either way");
     console.log("Warned user");
     return;
-    } else if (prompt == "yes") {
+    } else if (promptUser == "yes") {
     alert("Then why tf did you click it??");
     console.log("Warned user");
     return;
     } else {
     alert("Well, you aint getting there anyway, because it does not exist :D");
-    console.log("Warned user");
+    console.log("Warned user: " + promptUser);
     return;
     }
 }
